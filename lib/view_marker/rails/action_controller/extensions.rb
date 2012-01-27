@@ -13,7 +13,7 @@ module ViewMarker
       
         # Add a line to the log to mark the beginning of the view
         def render_with_hook_for_logging(options = nil, extra_options = {})
-          logger.debug ' Started view rendering '.center(80, '-')
+          Rails.logger.debug ' Started view rendering '.center(80, '-')
           render_without_hook_for_logging(options, extra_options)
         end
       end
